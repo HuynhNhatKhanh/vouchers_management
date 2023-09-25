@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 
 class VoucherUserService
 {
+    /**
+     * construct
+     *
+     * @param $voucherUserRepository, $voucherRepository
+     */
     public function __construct(VoucherUserRepository $voucherUserRepository, VoucherRepository $voucherRepository)
     {
         $this->voucherUserRepository = $voucherUserRepository;
