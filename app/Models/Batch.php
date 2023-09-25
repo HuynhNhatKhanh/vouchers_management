@@ -22,6 +22,10 @@ class Batch extends Model
         'end_date',
     ];
 
+    /**
+     * Relationship for table vouchers
+     *
+     */
     public function vouchers()
     {
         return $this->hasMany(Voucher::class);

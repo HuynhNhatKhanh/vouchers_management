@@ -30,6 +30,10 @@ class VoucherUser extends Model
         'used_at',
     ];
 
+    /**
+     * Relationship for table vouchers
+     *
+     */
     public function vouchers()
     {
         return $this->belongsTo(Voucher::class);

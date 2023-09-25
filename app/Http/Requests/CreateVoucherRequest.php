@@ -27,7 +27,7 @@ class CreateVoucherRequest extends FormRequest
             'start_date'  => 'nullable|date',
             'end_date'    => 'nullable|date',
             'status'      => 'required|in:"active","inactive"',
-            'batch_id'    => 'required|numberic',
+            'batch_id'    => 'required',
         ];
     }
 }

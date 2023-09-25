@@ -24,11 +24,19 @@ class Voucher extends Model
         'batch_id',
     ];
 
+    /**
+     * Relationship for table batchs
+     *
+     */
     public function batchs()
     {
         return $this->belongsTo(Batch::class);
     }
 
+    /**
+     * Relationship for table voucher_user
+     *
+     */
     public function voucher_user()
     {
         return $this->hasMany(VoucherUser::class);

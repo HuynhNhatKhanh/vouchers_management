@@ -14,7 +14,13 @@ class VoucherUserService
         $this->voucherRepository = $voucherRepository;
     }
 
-
+    /**
+     * use voucher
+     *
+     * @param $request
+     *
+     * @return mixed
+     */
     public function useVoucher(Request $request)
     {
         $id = $this->voucherRepository->getIdbyCode($request->code);

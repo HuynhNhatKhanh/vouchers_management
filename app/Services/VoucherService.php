@@ -7,11 +7,23 @@ use Illuminate\Http\Request;
 
 class VoucherService
 {
+    /**
+     * construct
+     *
+     * @param $voucherRepository
+     */
     public function __construct(VoucherRepository $voucherRepository)
     {
         $this->voucherRepository = $voucherRepository;
     }
 
+    /**
+     * Create voucher
+     *
+     * @param $request
+     *
+     * @return mixed
+     */
     public function create(Request $request)
     {
         $dataCreate = [
@@ -26,6 +38,13 @@ class VoucherService
         return $this->voucherRepository->create($dataCreate);
     }
 
+    /**
+     * Update voucher
+     *
+     * @param $request
+     *
+     * @return mixed
+     */
     public function update(Request $request, $id)
     {
         $dataUpdate = [
@@ -38,13 +57,5 @@ class VoucherService
             'batch_id'    => $request->batch_id,
         ];
         return $this->voucherRepository->update($dataUpdate, $id);
-    }
-
-    public function getVoucherByBatch(Request $request)
-    {
-        $dataFilter = [
-            'batch_id'    => $request->batch_id,
-        ];
-        return $this->voucherRepository->getVoucherByBatch($dataFilter);
     }
 }

@@ -67,26 +67,4 @@ class VoucherController extends Controller
         }
     }
 
-    /**
-     * @OA\Get(
-     *     path="/api/get-voucher-by-batch/2",
-     *     summary="Get voucher by batch",
-     *
-     *     @OA\Response(response="201", description="Get voucher by batch successfully"),
-     *     @OA\Response(response="422", description="Validation errors")
-     * )
-     */
-    public function getVoucherByBatch(Request $request)
-    {
-        try {
-            $data = $this->voucherService->getVoucherByBatch($request);
-            return response()->json([
-                'data'    => $data,
-                'message' => 'Get voucher successfully'
-            ], 201);
-        } catch (\Throwable $th) {
-            throw $th;
-            return response()->json(['message' => 'Get voucher unsuccessfully'], 404);
-        }
-    }
 }
