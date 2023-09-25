@@ -1,0 +1,88 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Swagger with Laravel",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/batch/list": {
+            "post": {
+                "summary": "List voucher by batch",
+                "operationId": "597e68767f609453fcd9c908cbb1dbb8",
+                "responses": {
+                    "201": {
+                        "description": "Get voucher by batch successfully"
+                    },
+                    "422": {
+                        "description": "Validation errors"
+                    }
+                }
+            }
+        },
+        "/api/vouchers": {
+            "post": {
+                "summary": "Create a new voucher",
+                "operationId": "a1cf7955eec4cfd194b64c0bd937f044",
+                "responses": {
+                    "201": {
+                        "description": "Create voucher successfully"
+                    },
+                    "422": {
+                        "description": "Validation errors"
+                    }
+                }
+            }
+        },
+        "/api/vouchers/1": {
+            "put": {
+                "summary": "Update voucher",
+                "operationId": "2470dc56e58f4429d1e7a4d87b51a783",
+                "responses": {
+                    "201": {
+                        "description": "Update voucher successfully"
+                    },
+                    "422": {
+                        "description": "Validation errors"
+                    }
+                }
+            }
+        },
+        "/api/get-voucher-by-batch/2": {
+            "get": {
+                "summary": "Get voucher by batch",
+                "operationId": "ef0ec49817535733d54c632f02fe1f5c",
+                "responses": {
+                    "201": {
+                        "description": "Get voucher by batch successfully"
+                    },
+                    "422": {
+                        "description": "Validation errors"
+                    }
+                }
+            }
+        },
+        "/api/useVoucher": {
+            "post": {
+                "summary": "List voucher by batch",
+                "operationId": "7ba36a656ca11dd4a98e953780262c3c",
+                "responses": {
+                    "201": {
+                        "description": "Create voucher successfully"
+                    },
+                    "422": {
+                        "description": "Validation errors"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "bearerFormat": "JWT",
+                "scheme": "bearer"
+            }
+        }
+    }
+}
